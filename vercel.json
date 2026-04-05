@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm install -g pnpm@10 && pnpm install --filter @workspace/salarn && pnpm --filter @workspace/salarn run build",
+  "outputDirectory": "artifacts/salarn/dist",
+  "installCommand": "echo 'Install handled in buildCommand'",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
